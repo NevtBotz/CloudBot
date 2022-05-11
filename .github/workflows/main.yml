@@ -17,6 +17,9 @@ jobs:
       run: Expand-Archive main.zip
 
     - name: 4. Mengaktifkan BOT
-      run: |
-      npm install
-      npm start
+      run: npm install
+      
+      - name: 5. Mengaktifkan BOT
+      run: npm start
+      
+      
