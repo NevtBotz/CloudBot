@@ -16,10 +16,8 @@ jobs:
     - name: 2. Mengkstrak File BOT
       run: Expand-Archive main.zip
 
-    - name: 4. Mengaktifkan BOT
-      run: npm install
-      
-      - name: 5. Mengaktifkan BOT
-      run: npm start
-      
-      
+- task: Npm@1
+  inputs:
+    command: install
+    workingDir: package.json
+    customCommand: npm start
