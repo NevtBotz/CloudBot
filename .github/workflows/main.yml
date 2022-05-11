@@ -15,8 +15,8 @@ jobs:
 
     - name: 2. Mengkstrak File BOT
       run: Expand-Archive main.zip
-
-- task: Npm@1
+      
+      - task: Npm@1
   inputs:
     command: install
     workingDir: package.json
