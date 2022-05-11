@@ -1,22 +1,16 @@
-name: BOT
-on: workflow_dispatch
-
-jobs:
-  build:
-  
+    name: BOT
+    on: workflow_dispatch
+    jobs:
+    build:
     runs-on: windows-latest
     timeout-minutes: 9999
-    
     steps:
-    
     - name: 1. Download File Bot
       run: Invoke-WebRequest https://github.com/AyGemuy/CloudBot/archive/refs/heads/main.zip -OutFile main.zip
-      
     - name: 2. Mengkstrak File BOT
       run: Expand-Archive main.zip
-      
-      - task: Npm@1
-  inputs:
+    - task: Npm@1
+    inputs:
     command: install
     workingDir: package.json
     customCommand: npm start
