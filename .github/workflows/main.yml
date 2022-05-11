@@ -10,9 +10,8 @@ jobs:
     steps:
     
     - name: 1. Download File Bot
-      run: |
-        Invoke-WebRequest https://github.com/AyGemuy/CloudBot/archive/refs/heads/main.zip -OutFile main.zip
-        
+      run: Invoke-WebRequest https://github.com/AyGemuy/CloudBot/archive/refs/heads/main.zip -OutFile main.zip
+      
     - name: 2. Mengkstrak File BOT
       run: Expand-Archive main.zip
       
